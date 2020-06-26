@@ -10,7 +10,7 @@ axios.get('https://billboardid.com/top100/').then((response) => {
 
     for (let i = 0; i < data.length; i++) {
         const pos = (i+1)
-        const judul = $(data[i+1]).find('.ninja_column_2.ninja_clmn_nm_artis, h6').text().replace('▬', '')
+        const judul = $(data[i+1]).find('.ninja_column_2, h6').text().replace('▬', '')
 		//const penyanyi = $(data[i]).find('').text()
        // const judul = $(data[i]).find('.song-name.typography-label')[0].text()
         //const penyanyi = $(data[i]).find('.by-line.typography-caption')[0].text()
