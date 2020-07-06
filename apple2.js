@@ -12,6 +12,8 @@ axios.get('https://music.apple.com/pg/playlist/top-100-indonesia/pl.2b7e089dc9ef
         const pos = (i + 1)
         const judul = $(data[i]).find('div.col-song div.col-song__wrapper div.two-lines div.song-name-wrapper div.typography-label').text()
         const penyanyi = $(data[i]).find('div.col-song div.col-song__wrapper div.two-lines div.song-name-wrapper div.typography-caption a.dt-link-to').text()
+        
+        
         // const judul = $(data[i]).find('.song-name.typography-label')[0].text()
         //const penyanyi = $(data[i]).find('.by-line.typography-caption')[0].text()
 
