@@ -1,15 +1,23 @@
-const cheerio = require('cheerio')
-const axios = require('axios')
+'use strict'
 
-axios.get('https://www.youtube.com/user/musicastudios/videos').then((response) => {
 
-    const $ = cheerio.load(response.data)
-    var data = $('ytd-grid-video-renderer');
-    console.log("data youtube : ", data.length)
+const cheerio = require('cheerio');
+const axios = require('axios');
+
+
+var url = "https://www.youtube.com/c/MusicaStudios/videos";
+
+axios.get(url).then((err, response) => {
+    console.log("ini url: ", url)
+
+    const $ = cheerio.load(response.data);
+
+    var data = $('#channels-browse-content-grid li .yt-lockup-video');
+
+    console.log("pjg data :",data.length)
 
     for (let i = 0; i < data.length; i++) {
         const pos = (i + 1)
-        // const list = $(data[i + 1]).find('strong').text().replace('⇧', '').replace('⇩', '').replace('≡', '').replace('⇳', '').replace('☆', '').replace(new RegExp('[0-9]', 'g'), '')
         const judul = $('#eow-title').text();
         const judulFIX = judul.slice(judul.indexOf('-') + 1, judul.length).trim();
         const version = judulFIX.indexOf('(') !== -1 ? judulFIX.slice(judulFIX.indexOf('('), judulFIX.length) : judulFIX.indexOf('|') !== -1 ? judulFIX.slice(judulFIX.indexOf('|'), judulFIX.length) : judulFIX.indexOf('-') !== -1 ? judulFIX.slice(judulFIX.indexOf('-'), judulFIX.length) : judulFIX.indexOf('[') !== -1 ? judulFIX.slice(judulFIX.indexOf('['), judulFIX.length) : '-'
@@ -18,4 +26,7 @@ axios.get('https://www.youtube.com/user/musicastudios/videos').then((response) =
 
         console.log(pos, judulFIX, penyanyiFIX)
     }
+
+    console.log(err)
 })
+
