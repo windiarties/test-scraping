@@ -5,13 +5,15 @@ const axios = require('axios');
 var url = "https://www.youtube.com/c/MusicaStudios/videos";
 
 axios.get(url).then((err, response) => {
+
     console.log("ini url: ", url)
 
     const $ = cheerio.load(response.data);
+    console.log("respon : ", response.data)
 
-    var data = $('#channels-browse-content-grid li .yt-lockup-video');
+    var data = $('div.ytd-grid-video-renderer, a');
 
-    console.log("pjg data :",data.length)
+    console.log("pjg data :", data.length)
 
     for (let i = 0; i < data.length; i++) {
         const pos = (i + 1)
