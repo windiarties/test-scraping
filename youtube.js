@@ -1,6 +1,3 @@
-'use strict'
-
-
 const cheerio = require('cheerio');
 const axios = require('axios');
 
