@@ -11,7 +11,7 @@ axios.get(url).then((err, response) => {
     const $ = cheerio.load(response.data);
     console.log("respon : ", response.data)
 
-    var data = $('.yt-simple-endpoint.style-scope ytd-grid-video-renderer','#video-title');
+    var data = $('a').filter('.video-title').attr('id');
 
     console.log("pjg data :", data.length)
 
