@@ -1,0 +1,21 @@
+{
+  "name": "coba",
+  "version": "1.0.0",
+  "main": "apple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "moment": "^2.27.0",
+    "node-datetime": "^2.1.2",
+    "pg": "^8.3.0",
+    "request": "^2.88.2",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "tinyreq": "^3.4.1"
+  }
+}
