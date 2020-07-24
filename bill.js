@@ -4,6 +4,7 @@ const axios = require('axios')
 axios.get('https://billboardid.com/top100/').then((response) => {
     const $ = cheerio.load(response.data)
     const data = $('.foo-table tr')
+    
     console.log("data billboard : ", data.length)
 
     for (let i = 0; i < data.length; i++) {
