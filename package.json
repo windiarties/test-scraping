@@ -1,13 +1,13 @@
 {
-  "name": "coba",
-  "version": "1.0.0",
+  "name": "test-scraping",
+  "version": "1.2.0",
   "main": "apple.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "You need two opened console to run this apps on development environment.",
   "dependencies": {
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
@@ -17,5 +17,14 @@
     "request": "^2.88.2",
     "selenium-webdriver": "^4.0.0-alpha.7",
     "tinyreq": "^3.4.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windiarties/test-scraping.git"
+  },
+  "bugs": {
+    "url": "https://github.com/windiarties/test-scraping/issues"
+  },
+  "homepage": "https://github.com/windiarties/test-scraping#readme"
 }
